@@ -25,7 +25,7 @@ const HomeProject = () =>{
                             <Tag color="#18314D">Webapp</Tag> 
                             <Tag color="#ED840C">API</Tag>
                         </p>
-                    <p>Live : <a href="https://github.com/surajondev/covid19-info">Text-To-Speeech</a></p>
+                    <p>Live : <a href="https://github.com/surajondev/covid19-info">Covid19-Info</a></p>
                 </Card>
 
                 <Card title="Get Weather" bordered={false} style={{width:"30%"}}>
@@ -35,7 +35,7 @@ const HomeProject = () =>{
                         <Tag color="#18314D">Webapp</Tag>
                         <Tag color="#ED840C">API</Tag>
                         </p>
-                    <p>Live : <a href="https://github.com/surajondev/get-weather">Text-To-Speeech</a></p>
+                    <p>Live : <a href="https://github.com/surajondev/get-weather">Get-Weather</a></p>
                 </Card>
             </div>
         </Card>
