@@ -1,86 +1,60 @@
+/* HEADER */
+
 *{
-    margin: 0;
-    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* ------HEADER------ */
-
-header{
-    padding: 2em 7em;
-    background-color: lightgreen;
+.pageHeader{
+    display: flex;
+    justify-content: flex-end;
 }
 
-.nav-bar{
-    margin : 0 auto;
+Button{
+    margin:  0 0.5em;
+}
+
+
+
+/* INTRO */
+
+.title{
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.header-p{
+    font-size: 1em;
+}
+
+.img-header{
+    border-radius: 50%;
     align-items: center;
-    width: 90%;
-    max-width: 1000px;
+    align-self: center;
+}
+
+.intro{
+    margin : 0 auto;
+    margin-top: 5em;
+    border: none;
+    width : 80%;
+    max-width : 1100px;
+}
+
+.Container{
     display: flex;
     justify-content: space-between;
-    list-style: none;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
 }
 
-.nav-link{
-    cursor: pointer;
+/* HOMEPAGE */
+
+.site-card-border-less-wrapper {
+    background-color:#EDF7FA;
+    margin-top: 5em;
 }
 
-.nav-link:link {
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* visited link */
-.nav-link:visited {
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* mouse over link */
-.nav-link:hover {
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* selected link */
-.nav-link:active {
-    color: white;
-    text-decoration: none;
-  }
-
-.nav-link:hover{
-      color:white;
-  }
-
-.logo-img{
-    height: 120px;
-
-    margin: -2.5em;
-}
-
-/* ------INTRO------ */
-
-.header-img{
-  max-width: 80%;
-  display: block;
-  margin: 0 auto;
-}
-
-.name{
-  text-align: center;
-  font-family: 'miracle day';
-}
-
-span{
-  color : red;
-}
-
-.description{
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  max-width: 90%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-top: 1em;
+.Card{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
 }
