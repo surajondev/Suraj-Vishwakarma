@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './Container/App.js'
+import App from './Containers/App.js'
 import 'antd/dist/antd.css';
 import './style.css'
 

@@ -4,7 +4,7 @@ import{Card, Tag, Image} from 'antd'
 const HomeBlog = () =>{
     return(
         <Card className="intro ">
-            <div className="Container">
+            <div className="Container div-header">
                 <h2>Blog</h2>
                 <p><a href="https://github.com/surajondev/">View All</a></p>
             </div>
@@ -13,7 +13,7 @@ const HomeBlog = () =>{
                 <div className="blog">
                     <div>
                         <a href="https://surajondev.wordpress.com/2021/04/12/40-useful-resources-for-mastering-web%f0%9f%8e%81/">
-                            <Image className="blog-img" preview={false} width="350px" src="https://surajondev.files.wordpress.com/2021/04/40-resources-to-help-you.png"></Image>
+                            <Image className="blog-img" preview={false}  src="https://surajondev.files.wordpress.com/2021/04/40-resources-to-help-you.png"></Image>
                         </a>
                     </div>
 
@@ -33,7 +33,7 @@ const HomeBlog = () =>{
                 <div className="blog">
                     <div>
                         <a href="https://surajondev.wordpress.com/2021/02/15/algorithms-every-programmer-should-know-part-1-searching-algorithm/">
-                            <Image className="blog-img" preview={false} width="350px" src="https://surajondev.files.wordpress.com/2021/02/searching-algorithm.png"></Image>
+                            <Image className="blog-img" preview={false} src="https://surajondev.files.wordpress.com/2021/02/searching-algorithm.png"></Image>
                         </a>
                     </div>
 
@@ -53,19 +53,19 @@ const HomeBlog = () =>{
                 <div className="blog">
                     <div>
                         <a href="https://surajondev.wordpress.com/2021/04/01/4-best-ui-framework-for-reactjs/">
-                            <Image className="blog-img" preview={false} width="350px" src="https://surajondev.files.wordpress.com/2021/04/ui-framework-for-react.png"></Image>
+                            <Image className="blog-img" preview={false} src="https://surajondev.files.wordpress.com/2021/04/ui-framework-for-react.png"></Image>
                         </a>
                     </div>
 
                     <div className="blog-description">
                         <h2>4 Best UI Framework For ReactJS</h2>
                         <Tag color="#64DCFC">React</Tag> 
-                        <Tag color="#20047A">Search</Tag>
+                        <Tag color="#20047A">Framework</Tag>
                         <p></p>
                         <p>
-                        Building any project from scratch is painful as it takes a lot of time, causes frustration and 
-                        we spent a lot of time on positioning components than improving functionality. 
-                        It is also a waste of time as we write code that is already written and available to you.
+                            Building any project from scratch is painful as it takes a lot of time, causes frustration and 
+                            we spent a lot of time on positioning components than improving functionality. 
+                            It is also a waste of time as we write code that is already written and available to you.
                         </p>
                     </div>
                 </div>
