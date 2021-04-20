@@ -1,5 +1,5 @@
 import React from "react"
-import {Card, Image,Space} from 'antd'
+import {Button, Card, Image, Space} from 'antd'
 import surajondev from '../img/surajondev.png'
 
 const Intro = () =>{
@@ -20,6 +20,7 @@ const Intro = () =>{
                     📝 I love to write blog post on technology as well as general topic.<br></br>
                     ⚡ Fun fact: I love old hindi songs....
                 </p>
+                <Button type="primary" size="large" href="https://dev.to/surajondev" danger>Visit Blog</Button>
             </div>
 
             <Space align="center">
