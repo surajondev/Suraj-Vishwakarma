@@ -4,6 +4,7 @@ import Intro from '../Components/Intro'
 import HomeProject from '../Components/HomeProject'
 import HomeBlog from '../Components/HomeBlog'
 import Footer from '../Components/Footer'
+import PageProjects from '../Components/PageProjects'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 class App extends React.Component{
@@ -12,7 +13,7 @@ class App extends React.Component{
             <Router>
                 <Switch>
                     <div>
-                        <Route path="/" component={Home} exact></Route>
+                        <Route path="/" component={HomePage} exact></Route>
                         <Route path="/projects" component={Projects}></Route>
                         <Route path="/blog" component={Blog}></Route>
                         <Footer />
@@ -23,7 +24,7 @@ class App extends React.Component{
     }
 }
 
-const Home = () =>{
+const HomePage = () =>{
     return(
         <div>
             <Header home="primary" project="default" blog="default" contact="default"/>
@@ -39,8 +40,7 @@ const Projects = () =>{
     return(
         <div>
             <Header home="default" project="primary" blog="default" contact="default"/>
-            <HomeProject />
-            <HomeProject />
+            <PageProjects />
         </div>
 
     )
@@ -50,7 +50,7 @@ const Blog = () =>{
     return(
         <div>
             <Header home="default" project="default" blog="primary" contact="default"/>
-            <HomeBlog />
+            <Blog />
         </div>
 
     )
