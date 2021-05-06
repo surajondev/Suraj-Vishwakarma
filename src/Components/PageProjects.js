@@ -30,12 +30,26 @@ class PageProjects extends React.Component {
     projectContainer=(i)=>{
         
         return(
+            <div className="Container Card">
                 <Project 
                     name={this.state.github[i].name}
                     desc={this.state.github[i].description}
                     tech={this.state.github[i].language}
                     live={this.state.github[i].homepage}
                 />
+                <Project 
+                    name={this.state.github[i+1].name}
+                    desc={this.state.github[i+1].description}
+                    tech={this.state.github[i+1].language}
+                    live={this.state.github[i+1].homepage}
+                />
+                <Project 
+                    name={this.state.github[i+2].name}
+                    desc={this.state.github[i+2].description}
+                    tech={this.state.github[i+2].language}
+                    live={this.state.github[i+1].homepage}
+                />
+            </div>
         )    
     }
 
@@ -60,16 +74,12 @@ class PageProjects extends React.Component {
                         <p><a href="https://github.com/surajondev/">View All</a></p>
                     </div>
 
-                    {this.state.github.map((name, index)=>{
+                    {this.state.github.map((name, index)=>{    
+                        if(index<this.state.github.length-2 & index%3==0){
                             return(
-                                <div className="Container Card">
-                                    {
-                                        this.projectContainer(index)
-                                        
-                                    }
-                                </div>
-                                
+                                  this.projectContainer(index)                                
                             )
+                        }   
                     })}
                 </Card>
             )
