@@ -1,5 +1,5 @@
 import React from 'react'
-import{Card} from 'antd'
+import {Card} from 'antd'
 import Project from "./Project.js"
 
 class PageProjects extends React.Component {
@@ -7,64 +7,73 @@ class PageProjects extends React.Component {
         super()
         {
             this.state = {
-                github1:[],
-                github2:[],
-                github3:[],
-                github4:[],
-                github5:[],
-                github6:[],
-                github7:[],
-                github8:[],
-                github9:[],
-                github10:[]
+                github: null,
+                isLoaded: false
             }
         }
     }
     
     async componentDidMount(){
 
-        const response = await fetch("https://api.github.com/users/surajondev/repos")
-        // fetch("https://api.github.com/users/surajondev/repos")
-        const data = await response.json();
+        const url = "https://api.github.com/users/surajondev/repos";
+
+        const response = await fetch(url)
+        const data = await response.json()
         this.setState(
             {
-                github1:data[0],
-                github2:data[1],
-                github3:data[2],
-                github4:data[3],
-                github5:data[4],
-                github6:data[4],
-                github7:data[6],
-                github8:data[7],
-                github9:data[8],
-                github10:data[9]
+                github:data,
+                isLoaded:true
             }
         )
     }
 
-    projectContainer=()=>{
-        console.log(this.state.github1)
+    projectContainer=(i)=>{
+        
         return(
-            <Project 
-                name={this.state.github1.name}
-                desc={this.state.github1.description}
-                tech={this.state.github1.language}
-                live={this.state.github1.homepage}
-            />
-        )
+                <Project 
+                    name={this.state.github[i].name}
+                    desc={this.state.github[i].description}
+                    tech={this.state.github[i].language}
+                    live={this.state.github[i].homepage}
+                />
+        )    
     }
 
     render(){
-        return(
-            <Card className="site-card-border-less-wrapper">
-                <div className="Container Card div-header">
-                    <h2>Projects</h2>
-                    <p><a href="https://github.com/surajondev/">View All</a></p>
-                </div>
-                {this.projectContainer}
-                
-            </Card>
-        )
+        if(!this.state.isLoaded){
+            return(
+                <Card className="site-card-border-less-wrapper">
+                    <div className="Container Card div-header">
+                        <h2>Projects</h2>
+                        <p><a href="https://github.com/surajondev/">View All</a></p>
+                    </div>
+                    <h1 align="center">Loading...</h1>
+                    
+                </Card>
+            )
+        }
+        else{
+            return(
+                <Card className="site-card-border-less-wrapper">
+                    <div className="Container Card div-header">
+                        <h2>Projects</h2>
+                        <p><a href="https://github.com/surajondev/">View All</a></p>
+                    </div>
+
+                    {this.state.github.map((name, index)=>{
+                            return(
+                                <div className="Container Card">
+                                    {
+                                        this.projectContainer(index)
+                                        
+                                    }
+                                </div>
+                                
+                            )
+                    })}
+                </Card>
+            )
+        }
     }
 }
 
