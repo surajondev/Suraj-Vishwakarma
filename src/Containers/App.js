@@ -50,7 +50,7 @@ const Blog = () =>{
     return(
         <div>
             <Header home="default" project="default" blog="primary" contact="default"/>
-            <Blog />
+            <HomeBlog />
         </div>
 
     )
