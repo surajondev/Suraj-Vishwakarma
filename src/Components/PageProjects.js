@@ -75,7 +75,7 @@ class PageProjects extends React.Component {
                     </div>
 
                     {this.state.github.map((name, index)=>{    
-                        if(index<this.state.github.length-2 & index%3==0){
+                        if(index<this.state.github.length-2 & index%3===0){
                             return(
                                   this.projectContainer(index)                                
                             )

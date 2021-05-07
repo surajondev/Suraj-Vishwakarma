@@ -14,7 +14,17 @@
     margin:  0 0.5em;
 }
 
+/* MENUHEADER */
 
+.Menu{
+    display: none;
+}
+
+.menuHeader{
+    position: block;
+    background-color: #EDF7FA;
+    text-align: center;
+}
 
 /* INTRO */
 
@@ -116,9 +126,19 @@ h2{
 
 @media(max-width:1300px){
 
-.blog-description{
-    padding: 0 5em 0 1em;
-}
+    .pageHeader{
+        display: none
+    
+    }
+
+    .Menu{
+        display: block;
+    }
+    
+
+    .blog-description{
+        padding: 0 5em 0 1em;
+    }
 
 }
 

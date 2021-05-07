@@ -5,6 +5,7 @@ import HomeProject from '../Components/HomeProject'
 import HomeBlog from '../Components/HomeBlog'
 import Footer from '../Components/Footer'
 import PageProjects from '../Components/PageProjects'
+import MenuHeader from '../Components/MenuHeader'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 class App extends React.Component{
@@ -28,6 +29,7 @@ const HomePage = () =>{
     return(
         <div>
             <Header home="primary" project="default" blog="default" contact="default"/>
+            <MenuHeader />
             <Intro />
             <HomeProject />
             <HomeBlog /> 
@@ -40,6 +42,7 @@ const Projects = () =>{
     return(
         <div>
             <Header home="default" project="primary" blog="default" contact="default"/>
+            <MenuHeader />
             <PageProjects />
         </div>
 
@@ -50,6 +53,7 @@ const Blog = () =>{
     return(
         <div>
             <Header home="default" project="default" blog="primary" contact="default"/>
+            <MenuHeader />
             <HomeBlog />
         </div>
 
